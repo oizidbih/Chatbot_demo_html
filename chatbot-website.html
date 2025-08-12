@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECC Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .main-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            height: 100px;
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        .main-title {
+            color: #8A1538;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chatbot-container {
+            width: 80%;
+            max-width: 1200px;
+            height: 700px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 1px 10px #8A1538;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #8A1538;
+        }
+        
+        .header {
+            background: #ffffff; 
+            color: #ffffff;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #A29475;
+            position: relative;
+        }
+        
+        .chatbot-frame {
+            width: 100%;
+            height: calc(100% - 60px);
+            border: none;
+            background: #ffffff;
+        }
+        
+        .status-indicator {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #8A1538;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .footer-accent {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: rgba(162, 148, 117, 0.2);
+            border-radius: 10px;
+            color: #8A1538;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .chatbot-container {
+                width: 85%;
+            }
+            
+            .main-title {
+                font-size: 24px;
+            }
+            
+            .logo {
+                height: 50px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .chatbot-container {
+                width: 95%;
+                height: 500px;
+            }
+            
+            .main-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-right: 0;
+                margin-bottom: 10px;
+                height: 45px;
+            }
+            
+            .main-title {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-header {
+                padding: 10px 20px;
+            }
+            
+            .main-title {
+                font-size: 18px;
+            }
+            
+            .logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-header">
+        <img src="/Users/elmoustaphaizidbih/Desktop/logo.png" alt="MECC Logo" class="logo">
+        
+    </div>
+    
+    <div class="chatbot-container">
+        
+        <iframe 
+            src="https://copilotstudio.microsoft.com/environments/Default-d4d2a571-d1fc-4b14-9ed5-c22506ef1d82/bots/crf89_docChatAssistant/webchat?__version__=2" 
+            class="chatbot-frame"
+            title="MECC Chat Assistant">
+        </iframe>
+    </div>
+    
+    <div class="footer-accent">
+        Ministry of Environment and Climate Change - State of Qatar
+    </div>
+</body>
+</html>
